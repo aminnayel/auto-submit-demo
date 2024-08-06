@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <script type="text/javascript" src="https://forms.whitelabelmd.com/jsform/242172391039858"></script>
+  <script>
+    var jsForm = document.getElementById("242172391039858")
+    var jsFormDoc = jsForm.contentDocument
+    jsForm.onload = function() {
+        var submitButton = jsFormDoc.getElementsByClassName("form-submit-button")[0]
+       
+        var semaglutide = jsFormDoc.querySelector("[name*='productChoiceS1']")
+        var tirzepatide = jsFormDoc.querySelector("[name*='productChoiceT1']")
+                       
+
+        semaglutide.addEventListener("change", function () {
+            console.log("submitting now")
+            submitButton.click()
+        })
+
+
+        
+        tirzepatide.addEventListener("change", function () {
+            console.log("submitting now")
+            submitButton.click()
+        })
+        
+
+   
+        
+    }
+
+</script>
+</body>
+</html>
